@@ -26,6 +26,7 @@ class Program
             Console.WriteLine("12. Відкласти книгу для покупця");
             Console.WriteLine("13. Отримати новинки");
             Console.WriteLine("14. Отримати топ-продажі");
+            Console.WriteLine("16. Отримати топ-продажі");
             Console.WriteLine("15. Вийти");
 
             var choice = Console.ReadLine();
@@ -208,7 +209,10 @@ class Program
 
                 case "15":
                     return;
-
+                case "16":
+                    bookStoreService.DisplayAllData();
+                    
+                    break;
                 default:
                     Console.WriteLine("Невірний вибір. Спробуйте ще раз.");
                     break;

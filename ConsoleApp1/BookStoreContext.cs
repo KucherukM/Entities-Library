@@ -43,8 +43,8 @@ public class BookStoreContext : DbContext
 
             entity.HasOne(b => b.PreviousBook)
                   .WithMany()
-                  .HasForeignKey(b => b.PreviousBookId)
-                  .OnDelete(DeleteBehavior.Restrict); // Change to Restrict to prevent cycles
+                  
+                  .OnDelete(DeleteBehavior.Restrict); 
         });
     }
 }
